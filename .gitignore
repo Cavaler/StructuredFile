@@ -4,3 +4,7 @@ Release
 *.lng
 *.7z
 .vs
+*.aps
+*.exp
+*.lib
+*.dll

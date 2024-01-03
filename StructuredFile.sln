@@ -4,12 +4,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StructuredFile", "StructuredFile.vcxproj", "{075A24B6-6A7D-4292-B300-88E3946C877D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7B8C7D3A-DD95-33BE-8413-BE6A3C60A436} = {7B8C7D3A-DD95-33BE-8413-BE6A3C60A436}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FarLib", "OwnLibrary\FarLib\FarLib.vcxproj", "{74FA64C9-638F-4BCE-AD72-60D660CE0C2A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{27A32067-1043-454E-9770-209B4C2E4A43} = {27A32067-1043-454E-9770-209B4C2E4A43}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pcre", "OwnLibrary\LibSrc\pcre\pcre.vcxproj", "{27A32067-1043-454E-9770-209B4C2E4A43}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pavel", "OwnLibrary\LibSrc\Pavel.vcxproj", "{22A97E73-BCA6-4F61-B5CD-0FB88E54711A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "json", "..\_External\YMSPlugins\json\json.vcxproj", "{9B97AEDF-FD33-4710-B822-341AE0A68543}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "yaml-cpp", "yaml-cpp.vcxproj", "{7B8C7D3A-DD95-33BE-8413-BE6A3C60A436}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +61,22 @@ Global
 		{22A97E73-BCA6-4F61-B5CD-0FB88E54711A}.Release|Win32.Build.0 = Release|Win32
 		{22A97E73-BCA6-4F61-B5CD-0FB88E54711A}.Release|x64.ActiveCfg = Release|x64
 		{22A97E73-BCA6-4F61-B5CD-0FB88E54711A}.Release|x64.Build.0 = Release|x64
+		{9B97AEDF-FD33-4710-B822-341AE0A68543}.Debug|Win32.ActiveCfg = Debug Far3|Win32
+		{9B97AEDF-FD33-4710-B822-341AE0A68543}.Debug|Win32.Build.0 = Debug Far3|Win32
+		{9B97AEDF-FD33-4710-B822-341AE0A68543}.Debug|x64.ActiveCfg = Debug Far3|x64
+		{9B97AEDF-FD33-4710-B822-341AE0A68543}.Debug|x64.Build.0 = Debug Far3|x64
+		{9B97AEDF-FD33-4710-B822-341AE0A68543}.Release|Win32.ActiveCfg = Release Far3|Win32
+		{9B97AEDF-FD33-4710-B822-341AE0A68543}.Release|Win32.Build.0 = Release Far3|Win32
+		{9B97AEDF-FD33-4710-B822-341AE0A68543}.Release|x64.ActiveCfg = Release Far3|x64
+		{9B97AEDF-FD33-4710-B822-341AE0A68543}.Release|x64.Build.0 = Release Far3|x64
+		{7B8C7D3A-DD95-33BE-8413-BE6A3C60A436}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7B8C7D3A-DD95-33BE-8413-BE6A3C60A436}.Debug|Win32.Build.0 = Debug|Win32
+		{7B8C7D3A-DD95-33BE-8413-BE6A3C60A436}.Debug|x64.ActiveCfg = Debug|x64
+		{7B8C7D3A-DD95-33BE-8413-BE6A3C60A436}.Debug|x64.Build.0 = Debug|x64
+		{7B8C7D3A-DD95-33BE-8413-BE6A3C60A436}.Release|Win32.ActiveCfg = Release|Win32
+		{7B8C7D3A-DD95-33BE-8413-BE6A3C60A436}.Release|Win32.Build.0 = Release|Win32
+		{7B8C7D3A-DD95-33BE-8413-BE6A3C60A436}.Release|x64.ActiveCfg = Release|x64
+		{7B8C7D3A-DD95-33BE-8413-BE6A3C60A436}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

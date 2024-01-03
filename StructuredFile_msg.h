@@ -21,6 +21,23 @@ enum eStringTable {
     MMB,
 
     MStructuredFile,
+    MRawEdit,
+
+    MCopy,
+    MCopyOneTo,
+    MCopyManyTo,
+    MDelete,
+    MDeleteOne,
+    MDeleteMany,
+    MSaveChanges,
+
+    MExportPrettyPrint,
+    MEditPrettyPrint,
+    MIndent,
+    MSaveUnixEOL,
 
     MInvalidNumber,
+    MOpenError,
+    MSaveError,
+    MParseError,
 };

@@ -54,25 +54,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(SolutionDir)OwnLibPath.props" />
-    <Import Project="$(OWN_LIB_PATH)\PropSheets\Base $(Configuration).props" />
-    <Import Project="$(OWN_LIB_PATH)\PropSheets\Base $(Platform).props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(SolutionDir)OwnLibPath.props" />
-    <Import Project="$(OWN_LIB_PATH)\PropSheets\Base $(Configuration).props" />
-    <Import Project="$(OWN_LIB_PATH)\PropSheets\Base $(Platform).props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(SolutionDir)OwnLibPath.props" />
-    <Import Project="$(OWN_LIB_PATH)\PropSheets\Base $(Configuration).props" />
-    <Import Project="$(OWN_LIB_PATH)\PropSheets\Base $(Platform).props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+  <ImportGroup Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(SolutionDir)OwnLibPath.props" />
     <Import Project="$(OWN_LIB_PATH)\PropSheets\Base $(Configuration).props" />
@@ -104,12 +86,16 @@
       <Version />
       <ModuleDefinitionFile>StructuredFile3.def</ModuleDefinitionFile>
       <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>yaml-cpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(Configuration)\$(PlatformName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command />
     </PostBuildEvent>
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>yaml/include;json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -120,9 +106,13 @@
       <Version />
       <ModuleDefinitionFile>StructuredFile3.def</ModuleDefinitionFile>
       <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalDependencies>yaml-cpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(Configuration)\$(PlatformName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>yaml/include;json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -132,12 +122,16 @@
     <ClCompile>
       <StringPooling>true</StringPooling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>yaml/include;json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <OutputFile>$(ProjectName)U3.dll</OutputFile>
       <Version />
       <ModuleDefinitionFile>StructuredFile3.def</ModuleDefinitionFile>
       <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>yaml-cpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(Configuration)\$(PlatformName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -147,18 +141,27 @@
     <ClCompile>
       <StringPooling>true</StringPooling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>yaml/include;json/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <OutputFile>$(ProjectName)U3 $(Platform).dll</OutputFile>
       <Version />
       <ModuleDefinitionFile>StructuredFile3.def</ModuleDefinitionFile>
       <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalDependencies>yaml-cpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(Configuration)\$(PlatformName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="IFormat.h" />
+    <ClInclude Include="JsonFormat.h" />
+    <ClInclude Include="PersistVars.h" />
     <ClInclude Include="StructuredFile.h" />
     <ClInclude Include="StructuredFile_msg.h" />
+    <ClInclude Include="TomlFormat.h" />
     <ClInclude Include="version.h" />
+    <ClInclude Include="YamlFormat.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="StructuredFile.msg">
@@ -198,13 +201,16 @@
       <Project>{22a97e73-bca6-4f61-b5cd-0fb88e54711a}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="OwnLibrary\LibSrc\pcre\pcre.vcxproj">
-      <Project>{27a32067-1043-454e-9770-209b4c2e4a43}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Format.cpp" />
+    <ClCompile Include="JsonFormat.cpp" />
     <ClCompile Include="StructuredFile.cpp" />
+    <ClCompile Include="TomlFormat.cpp" />
+    <ClCompile Include="YamlFormat.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="yaml\src\contrib\yaml-cpp.natvis" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
