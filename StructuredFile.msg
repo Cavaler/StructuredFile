@@ -1,0 +1,25 @@
+﻿.Language			English,English		Russian,Russian (Русский)
+
+MZero				""					""
+MOk					"Ok"				"OK"
+MCancel				"Cancel"			"Отмена"
+MBtnPresets			"Prese&ts"			"Пресеты"
+MBtnAdvanced		"Ad&vanced ]"		"Дополнит ]"
+MBtnBatch			"&Batch"			"&Пакет"
+MBtnRetry			"&Retry"			"&Повторить"
+MBtnSettings		"Settings"			"Настройки"
+MBtnClose			"Close"				"Закрыть"
+MBtnClear			"Clear"				"Очистить"
+MError				"Error"				"Ошибка"
+MWarning			"Warning"			"Предупреждение"
+MQuoteSearch		"&\"				"&\"
+MQuoteReplace		"&/"				"&/"
+MEllipsis			"&..."				"&..."
+MLeftBracket		"&["				"&["
+MRightBracket		"&]"				"&]"
+MKB					"KB"				"КБ"
+MMB					"MB"				"МБ"
+
+MStructuredFile		"Structured File"	"Structured File"
+
+MInvalidNumber		"Value not integer or not in range %d..%d"	"Неправильное число или не в границах %d..%d"

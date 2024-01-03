@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{075A24B6-6A7D-4292-B300-88E3946C877D}</ProjectGuid>
+    <RootNamespace>StructuredFile</RootNamespace>
+    <DisabledWarnings>4011</DisabledWarnings>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)OwnLibPath.props" />
+    <Import Project="$(OWN_LIB_PATH)\PropSheets\Base $(Configuration).props" />
+    <Import Project="$(OWN_LIB_PATH)\PropSheets\Base $(Platform).props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)OwnLibPath.props" />
+    <Import Project="$(OWN_LIB_PATH)\PropSheets\Base $(Configuration).props" />
+    <Import Project="$(OWN_LIB_PATH)\PropSheets\Base $(Platform).props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)OwnLibPath.props" />
+    <Import Project="$(OWN_LIB_PATH)\PropSheets\Base $(Configuration).props" />
+    <Import Project="$(OWN_LIB_PATH)\PropSheets\Base $(Platform).props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)OwnLibPath.props" />
+    <Import Project="$(OWN_LIB_PATH)\PropSheets\Base $(Configuration).props" />
+    <Import Project="$(OWN_LIB_PATH)\PropSheets\Base $(Platform).props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.29511.113</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>$(ProjectName)U3</TargetName>
+    <OutDir>$(FAR3_DEBUG_DLLS)\$(ProjectName)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>$(ProjectName)U3</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>$(ProjectName)U3 x64</TargetName>
+    <OutDir>$(FAR3_64_DEBUG_DLLS)\$(ProjectName)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>$(ProjectName)U3 x64</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <HeaderFileName />
+    </Midl>
+    <Link>
+      <Version />
+      <ModuleDefinitionFile>StructuredFile3.def</ModuleDefinitionFile>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command />
+    </PostBuildEvent>
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <HeaderFileName />
+    </Midl>
+    <Link>
+      <Version />
+      <ModuleDefinitionFile>StructuredFile3.def</ModuleDefinitionFile>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <StringPooling>true</StringPooling>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(ProjectName)U3.dll</OutputFile>
+      <Version />
+      <ModuleDefinitionFile>StructuredFile3.def</ModuleDefinitionFile>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <StringPooling>true</StringPooling>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(ProjectName)U3 $(Platform).dll</OutputFile>
+      <Version />
+      <ModuleDefinitionFile>StructuredFile3.def</ModuleDefinitionFile>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="StructuredFile.h" />
+    <ClInclude Include="StructuredFile_msg.h" />
+    <ClInclude Include="version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="StructuredFile.msg">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compiling language file %(FullPath)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(COMSPEC) /c $(OWN_LIB_PATH)\FarLib\MakeAndCopyLng.bat StructuredFile StructuredFile_msg.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)Eng.lng;$(ProjectName)Rus.lng;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compiling language file %(FullPath)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(COMSPEC) /c $(OWN_LIB_PATH)\FarLib\MakeAndCopyLng.bat StructuredFile StructuredFile_msg.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName)Eng.lng;$(ProjectName)Rus.lng;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compiling language file %(FullPath)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(COMSPEC) /c $(OWN_LIB_PATH)\FarLib\MakeAndCopyLng.bat StructuredFile StructuredFile_msg.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName)Eng.lng;$(ProjectName)Rus.lng;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compiling language file %(FullPath)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(COMSPEC) /c $(OWN_LIB_PATH)\FarLib\MakeAndCopyLng.bat StructuredFile StructuredFile_msg.h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName)Eng.lng;$(ProjectName)Rus.lng;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="StructuredFile3.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="StructuredFile.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="History.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="OwnLibrary\FarLib\FarLib.vcxproj">
+      <Project>{74fa64c9-638f-4bce-ad72-60d660ce0c2a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="OwnLibrary\LibSrc\Pavel.vcxproj">
+      <Project>{22a97e73-bca6-4f61-b5cd-0fb88e54711a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="OwnLibrary\LibSrc\pcre\pcre.vcxproj">
+      <Project>{27a32067-1043-454e-9770-209b4c2e4a43}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StructuredFile.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

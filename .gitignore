@@ -1,0 +1,6 @@
+Debug
+Release
+*.user
+*.lng
+*.7z
+.vs

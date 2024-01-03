@@ -1,0 +1,12 @@
+[submodule "OwnLibrary"]
+	path = OwnLibrary
+	url = git@mygithub.com:Cavaler/OwnLib.git
+[submodule "json"]
+	path = json
+	url = git@github.com:nlohmann/json.git
+[submodule "toml"]
+	path = toml
+	url = git@github.com:ToruNiina/toml11.git
+[submodule "yaml"]
+	path = yaml
+	url = git@github.com:jbeder/yaml-cpp.git
